@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+	width: 100%;
+    min-width: 350px;
+	height: 100%;
+	background-color: var(--color-option3);
+}

@@ -1,0 +1,68 @@
+.navbar {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding: 1rem 2rem;
+	background-color: var(--color-option2);
+}
+/* /* Styles for logo  */
+.navbar__logo-link {
+	display: block;
+}
+
+.navbar__logo-image {
+	height: auto;
+}
+
+/* /* Styles for links  */
+.navbar__links {
+	flex-grow: 1;
+}
+.navbar__links-list {
+	display: flex;
+	justify-content: center;
+    height: 100%;
+	align-items: center;
+	gap: var(--spacing-xlarge);
+}
+.navbar__link {
+	text-decoration: none;
+	font-size: medium;
+    color: var(--color-option8);
+    transition: border-bottom-color 2s linear, color 2s linear;
+}
+.navbar__item > *:hover {
+	color: var(--color-option5);
+    transition: border-bottom-color 0,2s linear, color 2s linear;
+}
+
+.navbar__link--active:hover{
+    border-bottom: 2px solid var(--color-option5);
+    transition: border-bottom-color 0.3s linear;
+}
+
+/* Styles for the menu  */
+.navbar__menu {
+	display: none;
+}
+.navbar__toggle{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+.navbar__hamburger-icon:hover {
+    color: var(--color-option5);
+    transition: color 0.3s linear;
+    /* this doesnt work? */
+}
+
+/* Tablet view */
+@media screen and (max-width: 690px) {
+	.navbar__menu {
+		display: flex;
+		align-items: center;
+    }
+    .navbar__item {
+        display: none;
+    }
+}
