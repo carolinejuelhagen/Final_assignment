@@ -1,68 +1,93 @@
 .navbar {
 	width: 100%;
 	display: flex;
+	align-items: center;
 	justify-content: space-around;
 	padding: 1rem 2rem;
 	background-color: var(--color-option2);
 }
-/* /* Styles for logo  */
-.navbar__logo-link {
-	display: block;
+/* STYLES FOR LOGO  */
+.navbar__logo-container {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .navbar__logo-image {
-	height: auto;
+	width: fit-content;
+	height: fit-content;
 }
 
-/* /* Styles for links  */
-.navbar__links {
+/* STYLES FOR LINKS  */
+.navbar__links-container {
 	flex-grow: 1;
 }
-.navbar__links-list {
+.navbar__links {
+	height: 100%;
 	display: flex;
 	justify-content: center;
-    height: 100%;
 	align-items: center;
-	gap: var(--spacing-xlarge);
+	gap: var(--spacing-large);
 }
-.navbar__link {
-	text-decoration: none;
-	font-size: medium;
-    color: var(--color-option8);
-    transition: border-bottom-color 2s linear, color 2s linear;
+.navbar__link a {
+	font-size: var(--spacing-medium);
 }
-.navbar__item > *:hover {
+.navbar__link a:hover {
 	color: var(--color-option5);
-    transition: border-bottom-color 0,2s linear, color 2s linear;
+}
+.navbar__link--active {
+	border-bottom: 1px solid var(--color-option5);
+}
+.navbar__link--active:hover {
+	border-bottom: 1 px solid var(--color-option5);
 }
 
-.navbar__link--active:hover{
-    border-bottom: 2px solid var(--color-option5);
-    transition: border-bottom-color 0.3s linear;
+/* STYLES FOR TOGGLE BUTTON */
+.navbar__toggle-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
-/* Styles for the menu  */
-.navbar__menu {
-	display: none;
-}
-.navbar__toggle{
+.navbar__toggle-button {
 	background-color: transparent;
 	border: none;
-	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
 }
-.navbar__hamburger-icon:hover {
-    color: var(--color-option5);
-    transition: color 0.3s linear;
-    /* this doesnt work? */
+.navbar__toggle-icon {
+	display: block;
+	display: none;
+	fill: var(--color-option5) !important;
 }
-
-/* Tablet view */
-@media screen and (max-width: 690px) {
-	.navbar__menu {
-		display: flex;
-		align-items: center;
-    }
-    .navbar__item {
-        display: none;
-    }
+.navbar__toggle-icon:hover {
+	fill: var(--hover-color) !important;
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+	.navbar__toggle-icon {
+		display: block;
+	}
+	.navbar__links {
+		position: absolute;
+		top: 0;
+		right: -1000px;
+		width: 50%;
+		flex-direction: column;
+		background-color: var(--color-option4);
+		backdrop-filter: blur(10px);
+		transition: left 1s;
+		color: aliceblue;
+	}
+	.navbar__links--active {
+		right: 0;
+	}
+}
+@media and (max-width: 580px) {
+	.navbar__links {
+		width: 100%;
+	}
 }
