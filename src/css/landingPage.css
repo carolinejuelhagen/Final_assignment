@@ -1,0 +1,26 @@
+.start-page{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/images/gallery/hero-image.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.start-page__container {
+    height: 30%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: space-evenly;
+    background-color: var(--color-background-light);
+    border: 2px solid var(--color-option4);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+}

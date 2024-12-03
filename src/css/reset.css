@@ -4,38 +4,3 @@
     box-sizing: border-box;
     list-style: none;
 }
-
-body{
-	width: 100%;
-    min-width: 350px;
-	height: 100%;
-	background-color: var(--color-option3);
-    font-family: BodoniModa, sans-serif;
-    font-size: 12px;
-	font-weight: 600;
-    color: var(--color-text);
-}
-@font-face {
-	font-family: BodoniModa;
-	src: url("../assets/fonts/BodoniModa.ttf");
-}
-
-img {
-    max-width: 100%;
-}
-
-a {
-    text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-    font-family: BodoniModa, sans-serif;
-    font-weight: 700;
-
-}
-
-footer {
-    margin-top: var(--spacing-small);
-    background-color: var(--color-option5);
-}

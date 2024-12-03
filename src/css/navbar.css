@@ -1,3 +1,7 @@
+header{
+	margin-bottom: var(--spacing-small);
+}
+
 .navbar {
 	width: 100%;
 	display: flex;
@@ -86,7 +90,8 @@
 		right: 0;
 	}
 }
-@media and (max-width: 580px) {
+
+@media screen and (max-width: 580px) {
 	.navbar__links {
 		width: 100%;
 	}

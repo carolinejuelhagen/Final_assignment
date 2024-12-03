@@ -1,23 +1,53 @@
-.hero-image {
-    margin-top: var(--spacing-small);
-    background-image: url("../assets/images/gallery/hero-image.jpeg");
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: -1;
+main {
+    height: 100vh;
+    width: 100%;
 }
 
-.hero-text {
-    background-color: #ffffffd4;
-    border: 2px solid #ffffff;
+body{
+	width: 100%;
+    min-width: 350px;
+	height: 100%;
+	background-color: var(--color-option3);
+    font-family: BodoniModa, sans-serif;
+    font-size: 12px;
+	font-weight: 600;
+    color: var(--color-text);
+}
+@font-face {
+	font-family: BodoniModa;
+	src: url("../assets/fonts/BodoniModa.ttf");
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: BodoniModa, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: var(--spacing-small);
+    border: var(--color-option2);
+    border-style: none;
     border-radius: 4px;
-    padding: 30px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
+    text-decoration: none;
+    box-shadow: 2px 2px 2px 1px;
+}
+
+footer {
+    margin-top: var(--spacing-small);
+    background-color: var(--color-option5);
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 580px) {
+
 }
