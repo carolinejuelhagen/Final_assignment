@@ -43,6 +43,7 @@ header{
 }
 .navbar__link--active {
 	border-bottom: 1px solid var(--color-option5);
+	z-index: 2;
 }
 .navbar__link--active:hover {
 	border-bottom: 1 px solid var(--color-option5);
@@ -60,7 +61,8 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 1;
+	box-shadow: none;
+	z-index: 2;
 }
 .navbar__toggle-icon {
 	display: block;

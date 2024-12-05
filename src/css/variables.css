@@ -1,20 +1,20 @@
-:root{    
-    /* Spacing */
-    --spacing-small: 0.5rem;
-    --spacing-medium: 1rem;
-    --spacing-large: 2rem;
-    --spacing-xlarge: 4rem;
-    --spacing-xxlarge: 8rem;
+:root {
+	/* Spacing */
+	--spacing-small: 0.5rem;
+	--spacing-medium: 1rem;
+	--spacing-large: 2rem;
+	--spacing-xlarge: 4rem;
+	--spacing-xxlarge: 8rem;
 
-    /* Colors */
-    --color-option1: #EDE8EA; 
-    --color-option2: #BFA2A8; 
-    --color-option3: #F9F5F7; 
-    --color-option4: #8C6A72; 
-    --color-option5: #A4CAB6; 
-    --color-option6: #F5D8C3; 
-    --color-option7: #FFEFE6; 
-    --color-option8: #503550; 
-    --color-background-light: #f4f0fc;
-    --hover-color: blue;
+	/* Colors */
+	--color-option1: #ede8ea;
+	--color-option2: #bfa2a8;
+	--color-option3: #f9f5f7;
+	--color-option4: #8c6a72;
+	--color-option5: #a4cab6;
+	--color-option6: #f5d8c3;
+	--color-option7: #ffefe6;
+	--color-option8: #503550;
+	--color-background-light: #f4f0fc;
+	--hover-color: blue;
 }

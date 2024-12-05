@@ -1,131 +1,217 @@
-// NAVBAR
+// NAVBAR TOGGLE
 const toggleMenuButton = document.querySelector(".navbar__toggle-button");
 const navbarLinksContainer = document.querySelector(".navbar__links");
-const links = document.querySelectorAll (".navbar__link");
 
-toggleMenuButton.addEventListener("click", ()=>{
+toggleMenuButton.addEventListener("click", () => {
     navbarLinksContainer.classList.toggle("navbar__links--active");
-})
+});
 
-// ARRAY LOCATIONS
+// LOCATIONS
+// DOM Elements
+const filterInput = document.querySelector("#filterInput");
+const filterDropdown = document.querySelector("#filterDropdown");
+const locationsCardContainer = document.querySelector(".locations__card-container");
 
+// Array locations
 const locations = [
     {
     title: "Vilma Sjøbad, Tofte",
-    description:
-        "A stunning seaside venue offering a romantic atmosphere with breathtaking fjord views—perfect for a tranquil, scenic wedding celebration.",
+    description: "A stunning seaside venue offering a romantic atmosphere.Vilma Sjøbad offers a serene atmosphere, perfect for couples seeking an intimate wedding with breathtaking sunset views and coastal charm.",
     price: 37500,
-    dealOffer: false,
+    cleaning: false,
+    service: false,
+    type: "seaside",
     imageUrl: "../src/assets/images/locations/vilmaSjobad1.jpg",
     },
     {
     title: "Villa Utsikten, Tofte",
-    description:
-        "Experience elegance and charm at this hillside villa, boasting panoramic views of the fjord—an ideal spot for a memorable wedding.",
+    description: "Perched on a hillside overlooking the fjord, Villa Utsikten combines elegance with scenic beauty. With its stunning panoramic views, this venue is an idyllic spot for couples desiring a sophisticated yet tranquil wedding experience.",
     price: 32000,
-    dealOffer: false,
+    cleaning: true,
+    service: false,
+    type: "seaside",
     imageUrl: "../src/assets/images/locations/villaUtsikten1.webp",
     },
     {
-    title: "Astral, Lilleborg, Oslo",
+    title: "Astral, Lilleborg",
     description: 
-    "The premises have a rough and industrial feel. Large window areas and modern furnishings also provide good settings for brides and grooms who want their wedding in an urban, unique and non-traditional environment.",
+    "Located in the heart of Oslo, Astral features a unique blend of industrial charm and modern design. Perfect for urban couples, this venue offers large windows, contemporary furnishings, and a vibrant, non-traditional wedding setting",
     price: 36000,
-    dealOffer: false,
+    cleaning: false,
+    service: false,
+    type: "urban",
     imageUrl: "../src/assets/images/locations/astral1.jpeg",
     },
     {
     title: "Helgaker Gård, Gran",
     description:
-        "A rustic farm with picturesque landscapes, offering a warm, intimate atmosphere for couples seeking a traditional countryside wedding.",
+        "Nestled in the countryside, Helgaker Gård is a charming farm venue surrounded by scenic landscapes. Ideal for traditional weddings, it provides an intimate setting with rustic charm and a warm, welcoming atmosphere",
     price: 17500,
-    dealOffer: false,
-    imageUrl: "../src/assets/images/locations/helgaakerGaard1.webp",
+    cleaning: false,
+    service: false,
+    type: "farm",
+    imageUrl: "../src/assets/images/locations/helgaker1.jpeg",
     },
     {
     title: "Holm gård, Hurum",
     description:
-        "Set in serene nature, this charming farm venue blends rustic elegance with scenic views, perfect for a cozy and relaxed wedding.",
+        "Tucked away in serene nature, Holm gård combines rustic elegance with scenic beauty. This cozy venue is perfect for couples dreaming of a relaxed wedding amidst rolling fields and peaceful surroundings.",
     price: 24900,
-    dealOffer: false,
+    cleaning: false,
+    service: false,
+    type: "farm",
     imageUrl: "../src/assets/images/locations/holmGaard1.jpg",
     },
     {
     title: "Svensefjøset, Lier",
     description:
-        "A historic barn venue with a cozy, rustic charm and modern amenities—ideal for couples looking for a country-style wedding.",
+        "A historic barn with modern amenities, Svensefjøset offers a delightful mix of tradition and comfort. Its warm interiors and country-style ambiance make it a perfect choice for couples envisioning a charming rural wedding.",
     price: 18000,
-    dealOffer: false,
+    cleaning: false,
+    service: true,
+    type: "farm",
     imageUrl: "../src/assets/images/locations/svensefjoset1.jpg",
     },
     {
-    title: "Lysebu, Oslo (Holmenkollen)",
+    title: "Lysebu, Holmenkollen",
     description:
-        "ocated high in the hills, Lysebu offers panoramic views of Oslo and a stylish, serene environment for your dream wedding.",
+        "Situated high in the Holmenkollen hills, Lysebu boasts spectacular views of Oslo. This stylish venue offers an elegant and serene environment, making it an ideal spot for a dream wedding with a touch of sophistication.",
     price: 51900,
-    dealOffer: false,
+    cleaning: false,
+    service: false,
+    type: "hillside",
     imageUrl: "../src/assets/images/locations/lysebu1.jpg",
     },
     {
-    title: "Rønningen, Lierdalen (Sylling)",
+    title: "Rønningen Gård, Lierdalen",
     description:
-        "A tranquil, nature-filled location with charming rustic settings, perfect for couples who desire a peaceful and intimate wedding celebration.",
+        "Rønningen is a tranquil retreat set in the midst of nature, offering charming rustic settings. Ideal for intimate weddings, this peaceful location provides a perfect escape from city life for a romantic celebration.",
     price: 17000,
-    dealOffer: false,
+    dcleaning: false,
+    service: true,
+    type: "farm",
     imageUrl: "../src/assets/images/locations/ronningen1.jpg",
     },
     {
     title: "Bogstad Gård, Oslo",
     description:
-        "A beautiful historic manor surrounded by nature, offering a timeless, elegant atmosphere for a sophisticated wedding experience.",
-    price: 23000,
+        "A historic estate surrounded by lush greenery, Bogstad Gård offers timeless elegance and charm. This stately manor is ideal for couples looking to host a sophisticated wedding in a serene, nature-filled setting.",
+    cleaning: false,
+    service: true,
+    type: "farm",
     imageUrl: "../src/assets/images/locations/bogstad1.jpg",
     },
     {
     title: "Båtsportens hus, Sandvika",
     description:
-        "A unique waterfront venue perfect for maritime-inspired weddings, offering a stylish, modern setting with spectacular views of the fjord.",
+        "Overlooking the stunning fjord, Båtsportens hus is a stylish waterfront venue. Its modern design and maritime-inspired setting make it a unique choice for couples seeking a vibrant, yet serene, wedding experience.",
     price: 12000,
-    dealOffer: false,
+    cleaning: true,
+    service: true,
+    type: "seaside",
     imageUrl: "../src/assets/images/locations/baatsportensHus1.webp",
+    },
+    {
+    title: "Syverstad gård, Asker",
+    description:
+        "Located in the serene countryside of Asker, Syverstad Gård offers a rustic and charming setting for a fairytale wedding. Surrounded by lush greenery and peaceful landscapes, this traditional farm venue blends historic elegance with modern amenities, making it a perfect spot for an intimate and unforgettable celebration",
+    price: 12000,
+    cleaning: true,
+    service: false,
+    type: "farm",
+    imageUrl: "../src/assets/images/locations/syverstad1.png",
+    },
+    {
+    title: "S4, Oslo sentrum",
+    description:
+        "Perched atop a bustling cityscape, S4 Rooftop offers a sleek and contemporary venue with panoramic views of Oslo’s skyline. This urban oasis combines modern design with vibrant energy, making it ideal for couples seeking a stylish, cosmopolitan wedding in the heart of the city.",
+    price: 12000,
+    cleaning: true,
+    service: true,
+    type: "urban",
+    imageUrl: "../src/assets/images/locations/s41.jpeg",
+    }, 
+    {
+    title: "Studentenes roklubb, Bygdøy",
+    description:
+        "Nestled along the serene waterfront of Bygdøy, Roklubben offers a unique blend of natural beauty and elegant charm. With stunning fjord views, lush surroundings, and a cozy atmosphere, this venue is perfect for couples dreaming of a tranquil and picturesque wedding by the water.",
+    price: 12000,
+    cleaning: false,
+    service: false,
+    type: ["urban", "seaside"], 
+    imageUrl: "../src/assets/images/locations/roklubben1.jpeg",
     }
 ];
 
-const locationsCardContainer = document.querySelector(".locations__card-container");
+// Function to render locations dynamically
+const renderLocations = (locationsArray) => {
+    locationsCardContainer.textContent = ""; // Clear previous content
 
-// RENDER LOCATIONS
-const renderLocations = (locations) => {
-    locationsCardContainer.textContent = ""; 
+    if (locationsArray.length === 0) {
+        locationsCardContainer.innerHTML = `<p>No locations found!</p>`;
+        return;
+    }
 
-    locations.forEach((location) => {
-
+    locationsArray.forEach((location) => {
         const card = document.createElement("article");
         card.classList.add("locations__card");
-
+// Image
         const img = document.createElement("img");
+        img.classList.add("locations__card-image");
         img.src = location.imageUrl || "default-placeholder.jpeg";
         img.alt = location.title || "Location image";
-
-        const cardContent = document.createElement("div");
-        cardContent.classList.add("card__content");
-
+// Title        
         const title = document.createElement("h3");
-        title.textContent = location.title || "Untitled Location";
-
+        title.classList.add("locations__card-heading");
+        title.textContent = location.title || "No Title";
+// Description
         const description = document.createElement("p");
+        description.classList.add("locations__card-description")
         description.textContent = location.description || "No description available.";
-
+// Price
         const price = document.createElement("p");
-        price.textContent = `Price ${location.price || "N/A"} NOK`;
-
-        const selectLocationButton = document.createElement("button");
-        selectLocationButton.classList.add("select-location-button");
-        selectLocationButton.textContent = "Select location";
-
-        cardContent.append(title, description, price);
-        card.append(img, cardContent, selectLocationButton);
-        locationsCardContainer.append(card);
+        price.classList.add("locations__card-price");
+        price.textContent = `Price: ${location.price || "N/A"} NOK`;
+// Type
+        const type = document.createElement("p");
+        type.classList.add("locations__card-type")
+        type.textContent = `Type: ${Array.isArray(location.type) ? location.type.join(", ") : location.type}`;
+// Button
+        const button = document.createElement("button");
+        button.classList.add("select-location-button");
+        button.textContent = "Select";
+        button.addEventListener("click", () => {
+            alert(`You selected ${location.title}`);
+});
+// Append child
+        card.append(img, title, description, price, type, button);
+        locationsCardContainer.appendChild(card);
     });
 };
 
+// Function to filter locations based on input and dropdown
+const filterLocations = () => {
+    const filterValue = filterInput.value.toLowerCase();
+    const dropdownValue = filterDropdown.value;
+
+    const filteredLocations = locations.filter((location) => {
+        const matchesType =
+            dropdownValue === "all" ||
+            (Array.isArray(location.type)
+                ? location.type.includes(dropdownValue)
+                : location.type === dropdownValue);
+        const matchesSearch = location.title.toLowerCase().includes(filterValue);
+
+        return matchesType && matchesSearch;
+    });
+
+    renderLocations(filteredLocations);
+};
+
+// Event Listeners
+filterInput.addEventListener("input", filterLocations);
+filterDropdown.addEventListener("change", filterLocations);
+
+// Initial render
 window.addEventListener("DOMContentLoaded", () => renderLocations(locations));
+
