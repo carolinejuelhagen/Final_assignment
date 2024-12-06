@@ -1,0 +1,13 @@
+.packages__heading{
+	font-size: var(--spacing-xlarge);
+	text-align: center;
+	font-weight: bold;
+	background: linear-gradient(to right, #503550, #8C6A72, #BFA2A8, #EDE8EA);
+  	background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+footer {
+	position: relative;
+	bottom: 0;
+}

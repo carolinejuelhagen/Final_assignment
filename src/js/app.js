@@ -96,7 +96,8 @@ const locations = [
     title: "Bogstad Gård, Oslo",
     description:
         "A historic estate surrounded by lush greenery, Bogstad Gård offers timeless elegance and charm. This stately manor is ideal for couples looking to host a sophisticated wedding in a serene, nature-filled setting.",
-    cleaning: false,
+    price: 68000,
+        cleaning: false,
     service: true,
     type: "farm",
     imageUrl: "../src/assets/images/locations/bogstad1.jpg",
@@ -215,3 +216,27 @@ filterDropdown.addEventListener("change", filterLocations);
 // Initial render
 window.addEventListener("DOMContentLoaded", () => renderLocations(locations));
 
+// FAQ
+document.addEventListener("DOMContentLoaded", () => {
+    const accordionItems = document.querySelectorAll(".accordion-item");
+
+    accordionItems.forEach(item => {
+        const question = item.querySelector(".accordion-question");
+        const answer = item.querySelector(".accordion-answer");
+
+    question.addEventListener("click", () => {
+        
+      // Toggle the current answer
+        const isActive = answer.style.display === "block";
+        answer.style.display = isActive ? "none" : "block";
+
+      // Collapse other open answers and remove active class
+        accordionItems.forEach(otherItem => {
+            if (otherItem !== item) {
+            otherItem.querySelector(".accordion-answer").style.display = "none";
+            otherItem.querySelector(".accordion-question").classList.remove("active");
+        }
+    });
+    });
+});
+});

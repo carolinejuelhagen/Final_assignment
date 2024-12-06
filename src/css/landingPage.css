@@ -24,3 +24,8 @@
     padding: 30px;
     text-align: center;
 }
+
+footer {
+	position: relative;
+	bottom: 0;
+}

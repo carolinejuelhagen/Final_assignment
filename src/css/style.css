@@ -7,6 +7,8 @@ body{
 	width: 100%;
     min-width: 350px;
 	height: 100%;
+    display: flex;
+    flex-direction: column;
 	background-color: var(--color-option3);
     font-family: BodoniModa, sans-serif;
     font-size: 12px;
@@ -40,8 +42,12 @@ button {
 }
 
 footer {
-    margin-top: var(--spacing-small);
+    text-align: center;
     background-color: var(--color-option5);
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
