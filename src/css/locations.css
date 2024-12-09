@@ -62,7 +62,7 @@ main {
 }
 .locations__card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 10px #00000026;
 }
 
 .locations__card-image {

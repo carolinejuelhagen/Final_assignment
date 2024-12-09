@@ -42,11 +42,11 @@ button {
 }
 
 footer {
+    position: relative;
     text-align: center;
     background-color: var(--color-option5);
     width: 100%;
     padding: 20px;
-    position: absolute;
     bottom: 0;
 }
 

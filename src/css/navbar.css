@@ -34,6 +34,7 @@ header{
 	justify-content: center;
 	align-items: center;
 	gap: var(--spacing-large);
+	list-style: none;
 }
 .navbar__link a {
 	font-size: var(--spacing-medium);
