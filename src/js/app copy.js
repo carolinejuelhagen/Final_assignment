@@ -157,41 +157,36 @@ const renderLocations = (locationsArray) => {
         const card = document.createElement("article");
         card.classList.add("locations__card");
 
+
         // Image
         const img = document.createElement("img");
         img.classList.add("locations__card-image");
         img.src = location.imageUrl || "default-placeholder.jpeg";
         img.alt = location.title || "Location image";
-
-        // Title
+// Title        
         const title = document.createElement("h3");
         title.classList.add("locations__card-heading");
         title.textContent = location.title || "No Title";
-
-        // Description
+// Description
         const description = document.createElement("p");
-        description.classList.add("locations__card-description");
+        description.classList.add("locations__card-description")
         description.textContent = location.description || "No description available.";
-
-        // Price
+// Price
         const price = document.createElement("p");
         price.classList.add("locations__card-price");
         price.textContent = `Price: ${location.price || "N/A"} NOK`;
-
-        // Type
+// Type
         const type = document.createElement("p");
-        type.classList.add("locations__card-type");
+        type.classList.add("locations__card-type")
         type.textContent = `Type: ${Array.isArray(location.type) ? location.type.join(", ") : location.type}`;
-
-        // Button
+// Button
         const button = document.createElement("button");
         button.classList.add("select-location-button");
         button.textContent = "Select";
         button.addEventListener("click", () => {
             alert(`You selected ${location.title}`);
-        });
-
-        // Append child
+});
+// Append child
         card.append(img, title, description, price, type, button);
         locationsCardContainer.appendChild(card);
     });
@@ -216,20 +211,14 @@ const filterLocations = () => {
     renderLocations(filteredLocations);
 };
 
-// Wrap Event Listeners in DOMContentLoaded
-document.addEventListener("DOMContentLoaded", () => {
-    if (filterInput && filterDropdown) {
-        filterInput.addEventListener("input", filterLocations);
-        filterDropdown.addEventListener("change", filterLocations);
-    } else {
-        console.error("Filter input or dropdown is missing from the DOM.");
-    }
+// Event Listeners
+filterInput.addEventListener("input", filterLocations);
+filterDropdown.addEventListener("change", filterLocations);
 
-    // Initial render
-    renderLocations(locations);
-});
+// Initial render
+window.addEventListener("DOMContentLoaded", () => renderLocations(locations));
 
-// FAQ Section
+// FAQ
 document.addEventListener("DOMContentLoaded", () => {
     const accordionItems = document.querySelectorAll(".accordion-item");
 
@@ -237,18 +226,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const question = item.querySelector(".accordion-question");
         const answer = item.querySelector(".accordion-answer");
 
-        question.addEventListener("click", () => {
-            // Toggle the current answer
-            const isActive = answer.style.display === "block";
-            answer.style.display = isActive ? "none" : "block";
+    question.addEventListener("click", () => {
+        
+      // Toggle the current answer
+        const isActive = answer.style.display === "block";
+        answer.style.display = isActive ? "none" : "block";
 
-            // Collapse other open answers and remove active class
-            accordionItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.querySelector(".accordion-answer").style.display = "none";
-                    otherItem.querySelector(".accordion-question").classList.remove("active");
-                }
-            });
-        });
+      // Collapse other open answers and remove active class
+        accordionItems.forEach(otherItem => {
+            if (otherItem !== item) {
+            otherItem.querySelector(".accordion-answer").style.display = "none";
+            otherItem.querySelector(".accordion-question").classList.remove("active");
+        }
+    });
     });
 });
+});
+
+// LOCAL STORAGE

@@ -1,12 +1,8 @@
-main {
-    height: 100vh;
-    width: 100%;
+html, body {
+    height: 100%;
 }
 
 body{
-	width: 100%;
-    min-width: 350px;
-	height: 100%;
     display: flex;
     flex-direction: column;
 	background-color: var(--color-option3);
@@ -15,6 +11,7 @@ body{
 	font-weight: 600;
     color: var(--color-text);
 }
+
 @font-face {
 	font-family: BodoniModa;
 	src: url("../assets/fonts/BodoniModa.ttf");
