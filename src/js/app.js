@@ -21,7 +21,7 @@ const locations = [
     cleaning: false,
     service: false,
     type: "seaside",
-    imageUrl: "../src/assets/images/locations/vilmaSjobad1.jpg",
+    imageUrl: "./src/assets/images/locations/vilmaSjobad1.jpg",
     },
     {
     title: "Villa Utsikten, Tofte",
@@ -30,7 +30,7 @@ const locations = [
     cleaning: true,
     service: false,
     type: "seaside",
-    imageUrl: "../src/assets/images/locations/villaUtsikten1.webp",
+    imageUrl: "./src/assets/images/locations/villaUtsikten1.webp",
     },
     {
     title: "Astral, Lilleborg",
