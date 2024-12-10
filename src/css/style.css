@@ -17,6 +17,14 @@ body{
 	src: url("../assets/fonts/BodoniModa.ttf");
 }
 
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
 img {
     max-width: 100%;
 }
