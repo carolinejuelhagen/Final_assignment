@@ -7,7 +7,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "seaside",
-		imageUrl: "./assets/images/vilmaSjobad1.jpg",
+		imageUrl: "./assets/images/locations/vilmaSjobad1.jpg",
 	},
 	{
 		title: "Villa Utsikten, Tofte",
@@ -17,7 +17,7 @@ const locations = [
 		cleaning: true,
 		service: false,
 		type: "seaside",
-		imageUrl: "./assets/images/villaUtsikten1.webp",
+		imageUrl: "./assets/images/locations/villaUtsikten1.webp",
 	},
 	{
 		title: "Astral, Lilleborg",
@@ -27,7 +27,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "urban",
-		imageUrl: "./assets/images/astral1.jpeg",
+		imageUrl: "./assets/images/locations/astral1.jpeg",
 	},
 	{
 		title: "Helgaker Gård, Gran",
@@ -37,7 +37,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "farm",
-		imageUrl: "./assets/images/helgaker1.jpeg",
+		imageUrl: "./assets/images/locations/helgaker1.jpeg",
 	},
 	{
 		title: "Holm gård, Hurum",
@@ -47,7 +47,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "farm",
-		imageUrl: "./assets/images/holmGaard1.jpg",
+		imageUrl: "./assets/images/locations/holmGaard1.jpg",
 	},
 	{
 		title: "Svensefjøset, Lier",
@@ -57,7 +57,7 @@ const locations = [
 		cleaning: false,
 		service: true,
 		type: "farm",
-		imageUrl: "./assets/images/svensefjoset1.jpg",
+		imageUrl: "./assets/images/locations/svensefjoset1.jpg",
 	},
 	{
 		title: "Lysebu, Holmenkollen",
@@ -67,7 +67,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "hillside",
-		imageUrl: "./assets/images/lysebu1.jpg",
+		imageUrl: "./assets/images/locations/lysebu1.jpg",
 	},
 	{
 		title: "Rønningen Gård, Lierdalen",
@@ -77,7 +77,7 @@ const locations = [
 		dcleaning: false,
 		service: true,
 		type: "farm",
-		imageUrl: "./assets/images/ronningen1.jpg",
+		imageUrl: "./assets/images/locations/ronningen1.jpg",
 	},
 	{
 		title: "Bogstad Gård, Oslo",
@@ -87,7 +87,7 @@ const locations = [
 		cleaning: false,
 		service: true,
 		type: "farm",
-		imageUrl: "./assets/images/bogstad1.jpg",
+		imageUrl: "./assets/images/locations/bogstad1.jpg",
 	},
 	{
 		title: "Båtsportens hus, Sandvika",
@@ -97,7 +97,7 @@ const locations = [
 		cleaning: true,
 		service: true,
 		type: "seaside",
-		imageUrl: "./assets/images/baatsportensHus1.webp",
+		imageUrl: "./assets/images/locations/baatsportensHus1.webp",
 	},
 	{
 		title: "Syverstad gård, Asker",
@@ -107,7 +107,7 @@ const locations = [
 		cleaning: true,
 		service: false,
 		type: "farm",
-		imageUrl: "./assets/images/syverstad1.png",
+		imageUrl: "./assets/images/locations/syverstad1.png",
 	},
 	{
 		title: "S4, Oslo sentrum",
@@ -117,7 +117,7 @@ const locations = [
 		cleaning: true,
 		service: true,
 		type: "urban",
-		imageUrl: "./assets/images/s41.jpeg",
+		imageUrl: "./assets/images/locations/s41.jpeg",
 	},
 	{
 		title: "Studentenes roklubb, Bygdøy",
@@ -127,7 +127,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: ["urban", "seaside"],
-		imageUrl: "./assets/images/roklubben1.jpeg",
+		imageUrl: "./assets/images/locations/roklubben1.jpeg",
 	},
 ];
 
