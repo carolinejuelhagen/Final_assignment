@@ -150,11 +150,13 @@ const locations = [
 
 // Function to render locations dynamically
 const renderLocations = (locationsArray) => {
-	locationsCardContainer.textContent = ""; // Clear previous content
+	locationsCardContainer.textContent = "";
 
 	if (locationsArray.length === 0) {
 		locationsCardContainer.innerHTML = `<p>No locations found!</p>`;
 		return;
+	}else {
+		console.error("Filter input or dropdown is missing from the DOM.");
 	}
 
 	locationsArray.forEach((location) => {
@@ -190,16 +192,8 @@ const renderLocations = (locationsArray) => {
 			Array.isArray(location.type) ? location.type.join(", ") : location.type
 		}`;
 
-		// Button
-		const button = document.createElement("button");
-		button.classList.add("select-location-button");
-		button.textContent = "Select";
-		button.addEventListener("click", () => {
-			alert(`You selected ${location.title}`);
-		});
-
 		// Append child
-		card.append(img, title, description, price, type, button);
+		card.append(img, title, description, price, type);
 		locationsCardContainer.appendChild(card);
 	});
 };
@@ -334,9 +328,26 @@ const packages = [
 	},
 ];
 
-console.log(packages);
+//calling form elements
 
-// Creating card and card container
+const form = document.querySelector(".contact__form");
+const firstNameInput = document.querySelector("[name='firstName']");
+const lastNameInput = document.querySelector("[name='lastName']");
+const emailInput = document.querySelector("[name='email']");
+const phoneInput = document.querySelector("[name='phone']");
+const primaryLocationInput = document.querySelector(
+	"[name='select-location1']"
+);
+const secondaryLocationInput = document.querySelector(
+	"[name='select-location2']"
+);
+const tertiaryLocationInput = document.querySelector(
+	"[name='select-location3']"
+);
+const packageInput = document.querySelector("[name='select-package']");
+const messageInput = document.querySelector("[name='message']");
+
+// Creating Packages card and card container
 const container = document.querySelector(".packages__card-container");
 
 packages.forEach((packageItem) => {
@@ -365,15 +376,49 @@ packages.forEach((packageItem) => {
 	price.classList.add("packages__card-price");
 	price.textContent = `Price: ${packageItem.price || "N/A"}`;
 
-	// Button
-	const button = document.createElement("button");
-	button.classList.add("select-package-button");
-	button.textContent = "Select";
-	button.addEventListener("click", () => {
-		alert(`You selected ${packageItem.name}`);
-	});
-
 	// Append child
-	card.append(img, title, description, price, button);
+	card.append(img, title, description, price);
 	container.appendChild(card);
+});
+
+// CONNECTING TO LOCAL STORAGE
+const customerSelections =
+	JSON.parse(localStorage.getItem("customerSelections")) || [];
+
+const storeCustomerSelection = () => {
+	const customerFirstName = firstNameInput.value;
+	const customerLastName = lastNameInput.value;
+	const customerEmail = emailInput.value;
+	const customerPhone = phoneInput.value;
+	const customerFirstPriorityLocation = primaryLocationInput.value;
+	const customerSecondPriorityLocation = secondaryLocationInput.value;
+	const customerThirdPriorityLocation = tertiaryLocationInput.value;
+	const customerPackage = packageInput.value;
+	const customerMessage = messageInput.value;
+
+	const selection = {
+		id: Date.now(),
+		customerFirstName,
+		customerLastName,
+		customerEmail,
+		customerPhone,
+		customerFirstPriorityLocation,
+		customerSecondPriorityLocation,
+		customerThirdPriorityLocation,
+		customerPackage,
+		customerMessage,
+	};
+
+	// const selections = JSON.parse(localStorage.getItem("customerSelections"));
+	customerSelections.push(selection);
+	form.reset();
+	localStorage.setItem(
+		"customerSelections",
+		JSON.stringify(customerSelections)
+	);
+};
+
+form.addEventListener("submit", (e) => {
+	e.preventDefault();
+	storeCustomerSelection();
 });

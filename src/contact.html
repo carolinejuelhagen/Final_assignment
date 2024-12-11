@@ -114,14 +114,113 @@
 							id="phone"
 							name="phone"
 							placeholder="Enter your phone number"
-							maxlength="10"
+							maxlength="11"
 							required />
 						<br />
+						<div class="accordion">
+							<label for="#">Select the locations you are intrested in</label>
+							<select
+								class="select-location"
+								id="selectLocation1"
+								name="select-location1"
+								required>
+								<option
+									class="display"
+									value=""
+									disabled
+									selected>
+									First priority
+								</option>
+								<option value="">Vilma Sjøbad, Tofte</option>
+								<option value="">Villa Utsikten, Tofte</option>
+								<option value="">Astral, Lilleborg</option>
+								<option value="">Helgaker Gård, Gran</option>
+								<option value="">Holm gård, Hurum</option>
+								<option value="">Svensefjøset, Lier</option>
+								<option value="">Lysebu, Holmenkollen</option>
+								<option value="">Rønningen Gård, Lierdalen</option>
+								<option value="">Bogstad Gård, Oslo</option>
+								<option value="">Båtsportens hus, Sandvika</option>
+								<option value="">Syverstad gård, Asker</option>
+								<option value="">S4, Oslo sentrum</option>
+								<option value="">Studentenes roklubb, Bygdøy</option>
+							</select>
+							<select
+								class="select-location"
+								id="selectLocation2"
+								name="select-location2">
+								<option
+									class="display"
+									value=""
+									disabled
+									selected>
+									Second priority
+								</option>
+								<option value="">Vilma Sjøbad, Tofte</option>
+								<option value="">Villa Utsikten, Tofte</option>
+								<option value="">Astral, Lilleborg</option>
+								<option value="">Helgaker Gård, Gran</option>
+								<option value="">Holm gård, Hurum</option>
+								<option value="">Svensefjøset, Lier</option>
+								<option value="">Lysebu, Holmenkollen</option>
+								<option value="">Rønningen Gård, Lierdalen</option>
+								<option value="">Bogstad Gård, Oslo</option>
+								<option value="">Båtsportens hus, Sandvika</option>
+								<option value="">Syverstad gård, Asker</option>
+								<option value="">S4, Oslo sentrum</option>
+								<option value="">Studentenes roklubb, Bygdøy</option>
+							</select>
+							<select
+								class="select-location"
+								id="selectLocation3"
+								name="select-location3">
+								<option
+									class="display"
+									value=""
+									disabled
+									selected>
+									Third priority
+								</option>
+								<option value="">Vilma Sjøbad, Tofte</option>
+								<option value="">Villa Utsikten, Tofte</option>
+								<option value="">Astral, Lilleborg</option>
+								<option value="">Helgaker Gård, Gran</option>
+								<option value="">Holm gård, Hurum</option>
+								<option value="">Svensefjøset, Lier</option>
+								<option value="">Lysebu, Holmenkollen</option>
+								<option value="">Rønningen Gård, Lierdalen</option>
+								<option value="">Bogstad Gård, Oslo</option>
+								<option value="">Båtsportens hus, Sandvika</option>
+								<option value="">Syverstad gård, Asker</option>
+								<option value="">S4, Oslo sentrum</option>
+								<option value="">Studentenes roklubb, Bygdøy</option></select
+							><br />
+							<label for="select-package"
+								>Select the package you are intrested in</label
+							>
+							<select
+								class="select-package"
+								id="selectPackage"
+								name="select-package"
+								required>
+								<option
+									class="display"
+									value=""
+									disabled
+									selected>
+									Select package
+								</option>
+								<option value="">Basic</option>
+								<option value="">Standard</option>
+								<option value="">Premium</option>
+								<option value="">Custom</option>
+							</select>
+						</div>
 						<label for="message">Message</label>
 						<textarea
 							id="message"
 							name="message"
-							rows="5"
+							rows="20"
 							maxlength="2000"
 							placeholder="Enter your message here..."
 							required>
@@ -133,7 +232,12 @@
 							value="Submit" />
 					</fieldset>
 					<!-- Success Message -->
-					<!-- <p id="successMessage">Thank you for contacting us! We will get back to you soon.</p> -->
+					<p
+						id="successMessage"
+						hidden>
+						Thank you for reaching out to us! We will get back to you within 48
+						hours.
+					</p>
 				</form>
 				<br />
 			</section>

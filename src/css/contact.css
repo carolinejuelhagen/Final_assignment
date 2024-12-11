@@ -36,6 +36,41 @@
 	padding: var(--spacing-large);
 	border-radius: 8px;
 }
+
+/* Accordion dropdown */
+
+.accordion {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center; 
+	gap: var(--spacing-medium); 
+	margin-bottom: var(--spacing-medium);
+}
+
+.accordion label {
+    display: block;
+    font-size: var(--spacing-medium);
+}
+
+.accordion select {
+	display: flex;
+	flex-direction: column;
+    width: 30%;
+    padding: var(--spacing-small);
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #fff;
+    color: var(--color-text);
+    font-size: var(--spacing-medium);
+    box-shadow: var(--box-shadow);
+}
+
+.accordion select:focus {
+    outline: none;
+    border-color: var(--hover-color);
+    box-shadow: 0 0 2px var(--hover-color);
+}
+
 #successMessage {
 	display: none;
 }
