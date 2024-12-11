@@ -4,6 +4,7 @@ body {
 	background-color: var(--color-option2);
 }
 
+
 main {
 	display: flex;
 	flex-direction: column;
@@ -23,6 +24,7 @@ main {
 	background-image: url(../assets/images/gallery/mainimgmedium.jpg);
 	background-size: cover;
 	background-position: center;
+	z-index: -10;
 }
 
 .hero__description {
@@ -35,7 +37,6 @@ main {
 	background-color: #0000008f;
 	padding: 120px;
 	border: 20px solid #ffffff9f;
-	z-index: 1;
 }
 
 .hero__description h1 {
