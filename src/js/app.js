@@ -1,20 +1,3 @@
-// NAVBAR TOGGLE
-const toggleMenuButton = document.querySelector(".navbar__toggle-button");
-const navbarLinksContainer = document.querySelector(".navbar__links");
-
-toggleMenuButton.addEventListener("click", () => {
-	navbarLinksContainer.classList.toggle("navbar__links--active");
-});
-
-// LOCATIONS
-// DOM Elements
-const filterInput = document.querySelector("#filterInput");
-const filterDropdown = document.querySelector("#filterDropdown");
-const locationsCardContainer = document.querySelector(
-	".locations__card-container"
-);
-
-// Array locations
 const locations = [
 	{
 		title: "Vilma Sjøbad, Tofte",
@@ -148,115 +131,6 @@ const locations = [
 	},
 ];
 
-// Function to render locations dynamically
-const renderLocations = (locationsArray) => {
-	locationsCardContainer.textContent = "";
-
-	if (locationsArray.length === 0) {
-		locationsCardContainer.innerHTML = `<p>No locations found!</p>`;
-		return;
-	}else {
-		console.error("Filter input or dropdown is missing from the DOM.");
-	}
-
-	locationsArray.forEach((location) => {
-		const card = document.createElement("article");
-		card.classList.add("locations__card");
-
-		// Image
-		const img = document.createElement("img");
-		img.classList.add("locations__card-image");
-		img.src = location.imageUrl || "default-placeholder.jpeg";
-		img.alt = location.title || "Location image";
-
-		// Title
-		const title = document.createElement("h3");
-		title.classList.add("locations__card-heading");
-		title.textContent = location.title || "No Title";
-
-		// Description
-		const description = document.createElement("p");
-		description.classList.add("locations__card-description");
-		description.textContent =
-			location.description || "No description available.";
-
-		// Price
-		const price = document.createElement("p");
-		price.classList.add("locations__card-price");
-		price.textContent = `Price: ${location.price || "N/A"} NOK`;
-
-		// Type
-		const type = document.createElement("p");
-		type.classList.add("locations__card-type");
-		type.textContent = `Type: ${
-			Array.isArray(location.type) ? location.type.join(", ") : location.type
-		}`;
-
-		// Append child
-		card.append(img, title, description, price, type);
-		locationsCardContainer.appendChild(card);
-	});
-};
-
-// Function to filter locations based on input and dropdown
-const filterLocations = () => {
-	const filterValue = filterInput.value.toLowerCase();
-	const dropdownValue = filterDropdown.value;
-
-	const filteredLocations = locations.filter((location) => {
-		const matchesType =
-			dropdownValue === "all" ||
-			(Array.isArray(location.type)
-				? location.type.includes(dropdownValue)
-				: location.type === dropdownValue);
-		const matchesSearch = location.title.toLowerCase().includes(filterValue);
-
-		return matchesType && matchesSearch;
-	});
-
-	renderLocations(filteredLocations);
-};
-
-// Wrap Event Listeners in DOMContentLoaded
-document.addEventListener("DOMContentLoaded", () => {
-	if (filterInput && filterDropdown) {
-		filterInput.addEventListener("input", filterLocations);
-		filterDropdown.addEventListener("change", filterLocations);
-	} else {
-		console.error("Filter input or dropdown is missing from the DOM.");
-	}
-
-	// Initial render
-	renderLocations(locations);
-});
-// FREQUENTLY ASKED QUESTIONS
-// Accordion
-document.addEventListener("DOMContentLoaded", () => {
-	const accordionItems = document.querySelectorAll(".accordion-item");
-
-	accordionItems.forEach((item) => {
-		const question = item.querySelector(".accordion-question");
-		const answer = item.querySelector(".accordion-answer");
-
-		question.addEventListener("click", () => {
-			// Toggle the current answer
-			const isActive = answer.style.display === "block";
-			answer.style.display = isActive ? "none" : "block";
-
-			// Collapse other open answers and remove active class
-			accordionItems.forEach((otherItem) => {
-				if (otherItem !== item) {
-					otherItem.querySelector(".accordion-answer").style.display = "none";
-					otherItem
-						.querySelector(".accordion-question")
-						.classList.remove("active");
-				}
-			});
-		});
-	});
-});
-
-// PACKAGES
 const packages = [
 	{
 		name: "Basic",
@@ -328,6 +202,10 @@ const packages = [
 	},
 ];
 
+// NAVBAR TOGGLE
+const toggleMenuButton = document.querySelector(".navbar__toggle-button");
+const navbarLinksContainer = document.querySelector(".navbar__links");
+
 //calling form elements
 
 const form = document.querySelector(".contact__form");
@@ -347,43 +225,176 @@ const tertiaryLocationInput = document.querySelector(
 const packageInput = document.querySelector("[name='select-package']");
 const messageInput = document.querySelector("[name='message']");
 
-// Creating Packages card and card container
-const container = document.querySelector(".packages__card-container");
-
-packages.forEach((packageItem) => {
-	const card = document.createElement("article");
-	card.classList.add("packages__card");
-
-	// Image
-	const img = document.createElement("img");
-	img.classList.add("packages__card-image");
-	img.src = packageItem.imageUrl || "default-placeholder.jpeg";
-	img.alt = packageItem.name || "Package image";
-
-	// Title
-	const title = document.createElement("h3");
-	title.classList.add("packages__card-heading");
-	title.textContent = packageItem.name || "No Title";
-
-	// Description
-	const description = document.createElement("p");
-	description.classList.add("packages__card-description");
-	description.textContent =
-		packageItem.description || "No description available.";
-
-	// Price
-	const price = document.createElement("p");
-	price.classList.add("packages__card-price");
-	price.textContent = `Price: ${packageItem.price || "N/A"}`;
-
-	// Append child
-	card.append(img, title, description, price);
-	container.appendChild(card);
-});
+// LOCATIONS DOM Elements
+const filterInput = document.querySelector("#filterInput");
+const filterDropdown = document.querySelector("#filterDropdown");
+const locationsCardContainer = document.querySelector(
+	".locations__card-container"
+);
 
 // CONNECTING TO LOCAL STORAGE
 const customerSelections =
 	JSON.parse(localStorage.getItem("customerSelections")) || [];
+console.log(customerSelections);
+
+toggleMenuButton.addEventListener("click", () => {
+	navbarLinksContainer.classList.toggle("navbar__links--active");
+});
+
+// // Function to render locations dynamically
+const renderLocations = (locationsArray) => {
+	locationsCardContainer.textContent = "";
+
+	if (locationsArray.length === 0) {
+		locationsCardContainer.innerHTML = `<p>No locations found!</p>`;
+		return;
+	}
+
+	locationsArray.forEach((location) => {
+		const card = document.createElement("article");
+		card.classList.add("locations__card");
+
+		// Image
+		const img = document.createElement("img");
+		img.classList.add("locations__card-image");
+		img.src = location.imageUrl || "default-placeholder.jpeg";
+		img.alt = location.title || "Location image";
+
+		// Title
+		const title = document.createElement("h3");
+		title.classList.add("locations__card-heading");
+		title.textContent = location.title || "No Title";
+
+		// Description
+		const description = document.createElement("p");
+		description.classList.add("locations__card-description");
+		description.textContent =
+			location.description || "No description available.";
+
+		// Price
+		const price = document.createElement("p");
+		price.classList.add("locations__card-price");
+		price.textContent = `Price: ${location.price || "N/A"} NOK`;
+
+		// Type
+		const type = document.createElement("p");
+		type.classList.add("locations__card-type");
+		type.textContent = `Type: ${
+			Array.isArray(location.type) ? location.type.join(", ") : location.type
+		}`;
+
+		// Append child
+		card.append(img, title, description, price, type);
+		locationsCardContainer.appendChild(card);
+	});
+};
+// Render packages
+const packagesCardContainer = document.querySelector(
+	".packages__card-container"
+);
+const renderPackages = (packagesArray) => {
+	packagesCardContainer.textContent = "";
+
+	if (packagesArray.length === 0) {
+		packagesCardContainer.innerHTML = `<p>No packages found!</p>`;
+		return;
+	}
+
+	packagesArray.forEach((package) => {
+		const card = document.createElement("article");
+		card.classList.add("packages__card");
+
+		const img = document.createElement("img");
+		img.classList.add("packages__card-image");
+		img.src = package.imageUrl || "default-placeholder.jpeg";
+		img.alt = package.title || "Packages image";
+
+		const contentContainer = document.createElement("div");
+		contentContainer.classList.add("packages__card-content");
+
+		const title = document.createElement("h3");
+		title.classList.add("packages__card-heading");
+		title.textContent = package.name || "No Title";
+
+		const description = document.createElement("p");
+		description.classList.add("packages__card-description");
+		description.textContent =
+			package.description || "No description available.";
+
+		const price = document.createElement("p");
+		price.classList.add("packages__card-price");
+		price.textContent = `Price: ${package.price || "N/A"} NOK`;
+
+		card.append(img, contentContainer);
+		contentContainer.append(title, description, price);
+		// card.append(img, title, description, price);
+		// packagesCardContainer.appendChild(card);
+		packagesCardContainer.appendChild(card);
+	});
+};
+
+// // Function to filter locations based on input and dropdown
+const filterLocations = () => {
+	const filterValue = filterInput.value.toLowerCase();
+	const dropdownValue = filterDropdown.value;
+
+	const filteredLocations = locations.filter((location) => {
+		const matchesType =
+			dropdownValue === "all" ||
+			(Array.isArray(location.type)
+				? location.type.includes(dropdownValue)
+				: location.type === dropdownValue);
+		const matchesSearch = location.title.toLowerCase().includes(filterValue);
+
+		return matchesType && matchesSearch;
+	});
+
+	renderLocations(filteredLocations);
+};
+
+// // Wrap Event Listeners in DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+	if (filterInput && filterDropdown) {
+		filterInput.addEventListener("input", filterLocations);
+		filterDropdown.addEventListener("change", filterLocations);
+	} else {
+		console.error("Filter input or dropdown is missing from the DOM.");
+	}
+
+	// Initial render
+	renderLocations(locations);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+	renderPackages(packages);
+});
+
+//FREQUENTLY ASKED QUESTIONS
+//Accordion
+document.addEventListener("DOMContentLoaded", () => {
+	const accordionItems = document.querySelectorAll(".accordion-item");
+
+	accordionItems.forEach((item) => {
+		const question = item.querySelector(".accordion-question");
+		const answer = item.querySelector(".accordion-answer");
+
+		question.addEventListener("click", () => {
+			// Toggle the current answer
+			const isActive = answer.style.display === "block";
+			answer.style.display = isActive ? "none" : "block";
+
+			// Collapse other open answers and remove active class
+			accordionItems.forEach((otherItem) => {
+				if (otherItem !== item) {
+					otherItem.querySelector(".accordion-answer").style.display = "none";
+					otherItem
+						.querySelector(".accordion-question")
+						.classList.remove("active");
+				}
+			});
+		});
+	});
+});
 
 const storeCustomerSelection = () => {
 	const customerFirstName = firstNameInput.value;
@@ -395,6 +406,16 @@ const storeCustomerSelection = () => {
 	const customerThirdPriorityLocation = tertiaryLocationInput.value;
 	const customerPackage = packageInput.value;
 	const customerMessage = messageInput.value;
+
+	console.log(customerFirstName);
+	console.log(customerLastName);
+	console.log(customerEmail);
+	console.log(customerPhone);
+	console.log(customerFirstPriorityLocation);
+	console.log(customerSecondPriorityLocation);
+	console.log(customerThirdPriorityLocation);
+	console.log(customerPackage);
+	console.log(customerMessage);
 
 	const selection = {
 		id: Date.now(),
@@ -409,7 +430,6 @@ const storeCustomerSelection = () => {
 		customerMessage,
 	};
 
-	// const selections = JSON.parse(localStorage.getItem("customerSelections"));
 	customerSelections.push(selection);
 	form.reset();
 	localStorage.setItem(
