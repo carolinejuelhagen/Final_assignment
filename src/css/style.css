@@ -1,15 +1,16 @@
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
+body {
+	display: flex;
+	flex-direction: column;
 	background-color: var(--color-option3);
-    font-family: BodoniModa, sans-serif;
-    font-size: 12px;
+	font-family: BodoniModa, sans-serif;
+	font-size: 12px;
 	font-weight: 600;
-    color: var(--color-text);
+	color: var(--color-text);
 }
 
 @font-face {
@@ -18,47 +19,41 @@ body{
 }
 
 .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 button {
-    cursor: pointer;
-    font-family: BodoniModa, sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: var(--spacing-small);
-    border: var(--color-option2);
-    border-style: none;
-    border-radius: 4px;
-    text-decoration: none;
-    box-shadow: 2px 2px 2px 1px;
+	cursor: pointer;
+	font-family: BodoniModa, sans-serif;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: var(--spacing-small);
+	border: var(--color-option2);
+	border-style: none;
+	border-radius: 4px;
+	text-decoration: none;
+	box-shadow: 2px 2px 2px 1px;
 }
 
 footer {
-    position: relative;
-    text-align: center;
-    background-color: var(--color-option5);
-    width: 100%;
-    padding: 20px;
-    bottom: 0;
+	position: relative;
+	text-align: center;
+	background-color: var(--color-option5);
+	width: 100%;
+	padding: 20px;
+	bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
-
 }
 
 @media screen and (max-width: 580px) {
-
 }

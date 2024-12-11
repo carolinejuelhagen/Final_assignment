@@ -8,13 +8,13 @@ main {
 	padding: var(--spacing-medium);
 }
 
-.locations__heading{
+.locations__heading {
 	font-size: var(--spacing-xlarge);
 	text-align: center;
 	font-weight: bold;
-	background: linear-gradient(to right, #503550, #8C6A72, #BFA2A8, #EDE8EA);
-  	background-clip: text;
-  	-webkit-text-fill-color: transparent;
+	background: linear-gradient(to right, #503550, #8c6a72, #bfa2a8, #ede8ea);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 /* Discover section */
@@ -33,7 +33,6 @@ main {
 	width: 80%;
 	max-width: 1200px;
 	align-self: center;
-	
 }
 
 .locations__card {
@@ -47,11 +46,10 @@ main {
 	background-color: #fff;
 	box-shadow: 0 4px 6px #0000001a;
 	position: relative;
-	
 }
 .locations__card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 10px #00000026;
+	transform: translateY(-5px);
+	box-shadow: 0 8px 10px #00000026;
 }
 
 .locations__card-image {
@@ -61,27 +59,27 @@ main {
 	border-radius: 5px 5px 0 0;
 }
 
-.locations__card-heading{
+.locations__card-heading {
 	width: 100%;
 	font-size: var(--spacing-large);
-    font-weight: bold;
-	background-color: #BFA2A8;
-    margin: 0;
-    color: var(--color-text);
+	font-weight: bold;
+	background-color: #bfa2a8;
+	margin: 0;
+	color: var(--color-text);
 }
 
-.locations__card-description{
-		font-size: 1rem;
-		line-height: 1.5;
-		border: var(--spacing-medium);
+.locations__card-description {
+	font-size: 1rem;
+	line-height: 1.5;
+	border: var(--spacing-medium);
 }
 .locations__card-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--color-highlight2);
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: var(--color-highlight2);
 }
 /* HIDE TYPE */
-.locations__card-type{
+.locations__card-type {
 	display: none;
 }
 /* BUTTON */
@@ -103,24 +101,24 @@ main {
 }
 
 .filter-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: var(--spacing-medium);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	gap: var(--spacing-medium);
 }
 
 .filter-section__input,
 .filter-section__dropdown {
-    padding: var(--spacing-medium);
-    font-size: 1rem;
-    border: 1px solid var(--color-option3);
-    border-radius: 5px;
-    flex: 1;
+	padding: var(--spacing-medium);
+	font-size: 1rem;
+	border: 1px solid var(--color-option3);
+	border-radius: 5px;
+	flex: 1;
 }
 
 .filter-section__dropdown {
-    max-width: 200px;
+	max-width: 200px;
 }
 
 footer {

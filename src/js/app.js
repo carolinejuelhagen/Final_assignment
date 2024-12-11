@@ -24,7 +24,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "seaside",
-		imageUrl: "../src/assets/images/vilmaSjobad1.jpg",
+		imageUrl: "./assets/images/vilmaSjobad1.jpg",
 	},
 	{
 		title: "Villa Utsikten, Tofte",
@@ -34,7 +34,7 @@ const locations = [
 		cleaning: true,
 		service: false,
 		type: "seaside",
-		imageUrl: "../src/assets/images/villaUtsikten1.webp",
+		imageUrl: "./assets/images/villaUtsikten1.webp",
 	},
 	{
 		title: "Astral, Lilleborg",
@@ -44,7 +44,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "urban",
-		imageUrl: "../src/assets/images/astral1.jpeg",
+		imageUrl: "./assets/images/astral1.jpeg",
 	},
 	{
 		title: "Helgaker Gård, Gran",
@@ -54,7 +54,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "farm",
-		imageUrl: "../src/assets/images/helgaker1.jpeg",
+		imageUrl: "./assets/images/helgaker1.jpeg",
 	},
 	{
 		title: "Holm gård, Hurum",
@@ -64,7 +64,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "farm",
-		imageUrl: "../src/assets/images/holmGaard1.jpg",
+		imageUrl: "./assets/images/holmGaard1.jpg",
 	},
 	{
 		title: "Svensefjøset, Lier",
@@ -74,7 +74,7 @@ const locations = [
 		cleaning: false,
 		service: true,
 		type: "farm",
-		imageUrl: "../src/assets/images/svensefjoset1.jpg",
+		imageUrl: "./assets/images/svensefjoset1.jpg",
 	},
 	{
 		title: "Lysebu, Holmenkollen",
@@ -84,7 +84,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: "hillside",
-		imageUrl: "../src/assets/images/lysebu1.jpg",
+		imageUrl: "./assets/images/lysebu1.jpg",
 	},
 	{
 		title: "Rønningen Gård, Lierdalen",
@@ -94,7 +94,7 @@ const locations = [
 		dcleaning: false,
 		service: true,
 		type: "farm",
-		imageUrl: "../src/assets/images/ronningen1.jpg",
+		imageUrl: "./assets/images/ronningen1.jpg",
 	},
 	{
 		title: "Bogstad Gård, Oslo",
@@ -104,7 +104,7 @@ const locations = [
 		cleaning: false,
 		service: true,
 		type: "farm",
-		imageUrl: "../src/assets/images/bogstad1.jpg",
+		imageUrl: "./assets/images/bogstad1.jpg",
 	},
 	{
 		title: "Båtsportens hus, Sandvika",
@@ -114,7 +114,7 @@ const locations = [
 		cleaning: true,
 		service: true,
 		type: "seaside",
-		imageUrl: "../src/assets/images/baatsportensHus1.webp",
+		imageUrl: "./assets/images/baatsportensHus1.webp",
 	},
 	{
 		title: "Syverstad gård, Asker",
@@ -124,7 +124,7 @@ const locations = [
 		cleaning: true,
 		service: false,
 		type: "farm",
-		imageUrl: "../src/assets/images/syverstad1.png",
+		imageUrl: "./assets/images/syverstad1.png",
 	},
 	{
 		title: "S4, Oslo sentrum",
@@ -134,7 +134,7 @@ const locations = [
 		cleaning: true,
 		service: true,
 		type: "urban",
-		imageUrl: "../src/assets/images/s41.jpeg",
+		imageUrl: "./assets/images/s41.jpeg",
 	},
 	{
 		title: "Studentenes roklubb, Bygdøy",
@@ -144,7 +144,7 @@ const locations = [
 		cleaning: false,
 		service: false,
 		type: ["urban", "seaside"],
-		imageUrl: "../src/assets/images/roklubben1.jpeg",
+		imageUrl: "./assets/images/roklubben1.jpeg",
 	},
 ];
 
@@ -313,25 +313,25 @@ const packages = [
 		imageUrl: "./assets/icons/premium.svg",
 		price: "200 000.-",
 	},
-    {
-        name: "Custom",
-        description:
-            "Tailored to your unique vision, this package allows you to customize every aspect of your wedding day for a truly one-of-a-kind celebration.",
-        includes: [
-            "Completely customizable venue setup",
-            "Personalized floral arrangements and decor tailored to your theme",
-            "Bespoke seating and table arrangements for up to 300 guests",
-            "Custom catering options, including specialty dietary menus",
-            "Entertainment options of your choice (DJ, live band, performers, etc.)",
-            "Full-service wedding planner to bring your ideas to life",
-            "Unique guest experiences (photo booths, interactive stations, etc.)",
-            "High-end photography and videography package (unlimited hours, cinematic edits)",
-            "Luxury bridal suite, groom's lounge, and transportation for the wedding party",
-            "Personalized guest favors and keepsakes"
-        ],
-        imageUrl: "./assets/icons/custom.svg",
-        price: "Upon request",
-    }    
+	{
+		name: "Custom",
+		description:
+			"Tailored to your unique vision, this package allows you to customize every aspect of your wedding day for a truly one-of-a-kind celebration.",
+		includes: [
+			"Completely customizable venue setup",
+			"Personalized floral arrangements and decor tailored to your theme",
+			"Bespoke seating and table arrangements for up to 300 guests",
+			"Custom catering options, including specialty dietary menus",
+			"Entertainment options of your choice (DJ, live band, performers, etc.)",
+			"Full-service wedding planner to bring your ideas to life",
+			"Unique guest experiences (photo booths, interactive stations, etc.)",
+			"High-end photography and videography package (unlimited hours, cinematic edits)",
+			"Luxury bridal suite, groom's lounge, and transportation for the wedding party",
+			"Personalized guest favors and keepsakes",
+		],
+		imageUrl: "./assets/icons/custom.svg",
+		price: "Upon request",
+	},
 ];
 
 console.log(packages);
