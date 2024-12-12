@@ -1,8 +1,28 @@
-Resources:
-Fix gradient: https://www.geeksforgeeks.org/how-to-create-linear-gradient-text-using-html-and-css/
+FINAL ASSIGNMENT, FIRST SEMESTER, FRONTEND DEVELOPMENT, KRISTIANIA COLLEGE, 2024
+This site is a project created as a final assignment for the semester. 
 
-Images: 
-Picture: Emma Bauso: https://www.pexels.com/nb-no/bilde/2253838/
-Picture: Terje Sollie: https://www.pexels.com/nb-no/bilde/313707/
-Picture: Trung Nguyen: https://www.pexels.com/nb-no/bilde/mann-kjaerlighet-mennesker-kvinne-2959192/
-Picture: Asad Photo Maldives: https://www.pexels.com/nb-no/bilde/1024993/
+References: images 
+- Styled images collected from Pexels from photographers 
+    - Emma Bauso
+    - Terje Sollie
+    - Trung Nguyen
+
+- The locations images are collected from the locations website
+    - Vilma Sjøbad
+    - Villa Utsikten
+    - Astral
+    - Helgaker Gård
+    - Holm gård
+    - Svensefjøset
+    - Lysebu
+    - Rønningen Gård
+    - Bogstad Gård
+    - Båtsportens hus
+    - Syverstad gård
+    - S4
+    - Studentenes roklubb
+
+References: Code
+- Code solved with the help of ChatGPT
+    - Function to filter locations based on input and dropdown
+    - Wrap Event Listeners in DOMContentLoaded

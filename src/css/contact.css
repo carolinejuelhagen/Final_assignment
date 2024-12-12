@@ -11,15 +11,14 @@
 	font-size: var(--spacing-xlarge);
 	text-align: center;
 	font-weight: bold;
-	background: linear-gradient(to right, #503550, #8c6a72, #bfa2a8, #ede8ea);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: var(--color-option8);
 }
 .contact-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	color: var(--color-option8);
 }
 .contact__form {
 	height: fit-content;
@@ -37,45 +36,43 @@
 	border-radius: 8px;
 }
 
-/* Accordion dropdown */
-
-.accordion {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center; 
-	gap: var(--spacing-medium); 
-	margin-bottom: var(--spacing-medium);
-}
-
-.accordion label {
+.contact__section-heading {
     display: block;
     font-size: var(--spacing-medium);
 }
 
-.accordion select {
+/* Selections Dropdown */
+
+
+.dropdown-locations{
 	display: flex;
 	flex-direction: column;
-    width: 30%;
-    padding: var(--spacing-small);
-    border: 1px solid black;
-    border-radius: 4px;
-    background-color: #fff;
+    width: 100%;
     color: var(--color-text);
     font-size: var(--spacing-medium);
-    box-shadow: var(--box-shadow);
+	margin-bottom: var(--spacing-medium);
 }
-
-.accordion select:focus {
-    outline: none;
-    border-color: var(--hover-color);
-    box-shadow: 0 0 2px var(--hover-color);
-}
-
-#successMessage {
-	display: none;
+.packages-dropdown{
+	display: flex;
+	flex-direction: column;
+    width: 100%;
+    color: var(--color-text);
+    font-size: var(--spacing-medium);
+	margin-bottom: var(--spacing-medium);
 }
 
 footer {
 	position: relative;
 	bottom: 0;
+}
+
+@media (max-width: 768px) {
+	fieldset >label{
+		font-size: var(--spacing-medium);
+	}
+	
+	.contact-heading {
+		font-size: var(--spacing-large);
+		margin: 20px;
+	}
 }

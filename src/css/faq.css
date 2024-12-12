@@ -1,17 +1,59 @@
+main {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 16px; 
+}
+h1 {
+	width: 100%;
+	padding: 16px;
+	margin-bottom: 24px;
+}
+
 .faq-heading {
-	font-size: var(--spacing-large);
+	font-size: var(--spacing-xlarge);
+	color: var(--color-option8);
 	text-align: center;
 	font-weight: bold;
-	background: linear-gradient(to right, #503550, #8c6a72, #bfa2a8, #ede8ea);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
+}
+
+.faq, .image-container {
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 50%; 
+}
+
+.faq {
+	margin-right: 8px;
 }
 
 .faq-container {
 	max-width: 800px;
 	margin: 0 auto;
-	padding-left: 60px;
-	padding-right: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	object-fit: cover;
+	padding-bottom: 16px;
+	box-sizing: border-box;
+}
+.image-container img {
+	width: 60%;
+	max-width: 500px;
+	max-height: 800px;
+	min-height: 623px;
+	object-fit: cover;
+	margin-bottom: auto;
+	border-radius: 8px;
+}
+.faq-image{
+	width: 100%;
 }
 
 .accordion-item {

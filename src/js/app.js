@@ -144,7 +144,7 @@ const packages = [
 			"Dedicated day-of coordinator",
 		],
 		imageUrl: "./assets/icons/budget.svg",
-		price: "50 000.-",
+		price: " From 50 000.-",
 	},
 	{
 		name: "Standard",
@@ -160,7 +160,7 @@ const packages = [
 			"Wedding cake (3 tiers, customizable design)",
 		],
 		imageUrl: "./assets/icons/standard.svg",
-		price: "100 000.-",
+		price: " From 100 000.-",
 	},
 	{
 		name: "Premium",
@@ -179,7 +179,7 @@ const packages = [
 			"Guest favors and event styling",
 		],
 		imageUrl: "./assets/icons/premium.svg",
-		price: "200 000.-",
+		price: " From 200 000.-",
 	},
 	{
 		name: "Custom",
@@ -198,7 +198,7 @@ const packages = [
 			"Personalized guest favors and keepsakes",
 		],
 		imageUrl: "./assets/icons/custom.svg",
-		price: "Upon request",
+		price: " Upon request",
 	},
 ];
 
@@ -241,7 +241,7 @@ toggleMenuButton.addEventListener("click", () => {
 	navbarLinksContainer.classList.toggle("navbar__links--active");
 });
 
-// // Function to render locations dynamically
+//Function to render locations dynamically
 const renderLocations = (locationsArray) => {
 	locationsCardContainer.textContent = "";
 
@@ -288,7 +288,7 @@ const renderLocations = (locationsArray) => {
 		locationsCardContainer.appendChild(card);
 	});
 };
-// Render packages
+// Function to render packages dynamically
 const packagesCardContainer = document.querySelector(
 	".packages__card-container"
 );
@@ -327,13 +327,11 @@ const renderPackages = (packagesArray) => {
 
 		card.append(img, contentContainer);
 		contentContainer.append(title, description, price);
-		// card.append(img, title, description, price);
-		// packagesCardContainer.appendChild(card);
 		packagesCardContainer.appendChild(card);
 	});
 };
 
-// // Function to filter locations based on input and dropdown
+// Function to filter locations based on input and dropdown
 const filterLocations = () => {
 	const filterValue = filterInput.value.toLowerCase();
 	const dropdownValue = filterDropdown.value;
@@ -352,7 +350,7 @@ const filterLocations = () => {
 	renderLocations(filteredLocations);
 };
 
-// // Wrap Event Listeners in DOMContentLoaded
+// Wrap Event Listeners in DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
 	if (filterInput && filterDropdown) {
 		filterInput.addEventListener("input", filterLocations);
