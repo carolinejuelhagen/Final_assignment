@@ -16,7 +16,6 @@ main {
 	
 }
 
-/* Discover section */
 .packages {
 	display: flex;
 	flex-direction: column;
@@ -24,7 +23,7 @@ main {
 	z-index: -1;
 }
 
-/* Destinations cards */
+/* PACKAGES CARDS */
 .packages__card-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -86,25 +85,7 @@ main {
 	color: var(--color-highlight2);
 }
 
-/* BUTTON */
-.select-package-button {
-	background-color: var(--color-option2);
-	color: #fff;
-	min-width: 1rem;
-	padding: 1em 8em;
-	margin: 0 auto;
-	border: 2px solid black;
-	display: block;
-	cursor: pointer;
-}
-.select-package-button:hover {
-	background-color: var(--color-highlight2);
-	color: var(--color-text);
-}
-.select-package-button:active {
-	background-color: var(--color-option2);
-}
-
+/* FILTER */
 .filter-section {
 	display: flex;
 	justify-content: space-between;
@@ -134,7 +115,7 @@ footer {
 /* Tablet */
 @media (max-width: 1024px) {
 	.packages__card {
-		flex: 1 1 calc(50% - var(--spacing-medium)); /* Two cards per row */
+		flex: 1 1 calc(50% - var(--spacing-medium)); 
 		max-width: calc(50% - var(--spacing-medium));
 	}
 }
@@ -142,7 +123,7 @@ footer {
 /* Mobile */
 @media (max-width: 768px) {
 	.packages__card {
-		flex: 1 1 100%; /* Each card takes full width on mobile */
+		flex: 1 1 100%; 
 		max-width: 100%;
 	}
 }

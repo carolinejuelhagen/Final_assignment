@@ -30,7 +30,7 @@ a {
 	text-decoration: none;
 }
 
-button {
+.button {
 	cursor: pointer;
 	font-family: BodoniModa, sans-serif;
 	font-weight: bold;
@@ -50,10 +50,4 @@ footer {
 	width: 100%;
 	padding: 20px;
 	bottom: 0;
-}
-
-@media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 580px) {
 }

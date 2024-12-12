@@ -43,9 +43,6 @@
 				<!-- NAVBAR LINKS -->
 				<div class="navbar__links-container">
 					<ul class="navbar__links">
-						<!-- <li class="navbar__link navbar__link--active">
-                        <a href="./about.html">About us</a>
-                    </li> -->
 						<li class="navbar__link"><a href="index.html">HOME</a></li>
 						<li class="navbar__link">
 							<a href="./locations.html">LOCATIONS</a>
@@ -116,13 +113,24 @@
 							maxlength="11"
 							autocomplete=""
 							required />
-							<br>
-
+						<br />
 
 						<div class="dropdown-locations">
-							<label for="selectedLocation1">Select the locations you are intrested in</label>
-							<select class="select-location" id="selectLocation1" name="select-location1" required>
-								<option class="display" value="selected" disabled selected>First priority</option>
+							<label for="selectedLocation1"
+								>Select the locations you are intrested in</label
+							>
+							<select
+								class="select-location"
+								id="selectLocation1"
+								name="select-location1"
+								required>
+								<option
+									class="display"
+									value="selected"
+									disabled
+									selected>
+									First priority
+								</option>
 								<option value="Vilma">Vilma Sjøbad, Tofte</option>
 								<option value="utsikten">Villa Utsikten, Tofte</option>
 								<option value="astral">Astral, Lilleborg</option>
@@ -138,8 +146,17 @@
 								<option value="roklubb">Studentenes roklubb, Bygdøy</option>
 							</select>
 							<label for="selectLocation2"></label>
-							<select class="select-location" id="selectLocation2" name="select-location2">
-								<option class="display"value="empty" disabled selected>Second priority</option>
+							<select
+								class="select-location"
+								id="selectLocation2"
+								name="select-location2">
+								<option
+									class="display"
+									value="empty"
+									disabled
+									selected>
+									Second priority
+								</option>
 								<option value="Vilma">Vilma Sjøbad, Tofte</option>
 								<option value="utsikten">Villa Utsikten, Tofte</option>
 								<option value="astral">Astral, Lilleborg</option>
@@ -155,8 +172,17 @@
 								<option value="roklubb">Studentenes roklubb, Bygdøy</option>
 							</select>
 							<label for="selectLocation3"></label>
-							<select class="select-location" id="selectLocation3" name="select-location3">
-								<option class="display" value="empty" disabled selected>Third priority</option>
+							<select
+								class="select-location"
+								id="selectLocation3"
+								name="select-location3">
+								<option
+									class="display"
+									value="empty"
+									disabled
+									selected>
+									Third priority
+								</option>
 								<option value="Vilma">Vilma Sjøbad, Tofte</option>
 								<option value="utsikten">Villa Utsikten, Tofte</option>
 								<option value="astral">Astral, Lilleborg</option>
@@ -173,9 +199,21 @@
 							</select>
 						</div>
 						<div class="packages-dropdown">
-							<label for="selectPackage">Select the package you are intrested in</label>
-							<select class="select-package" id="selectPackage" name="select-package" required>
-								<option class="display" value="" disabled selected>Select package</option>
+							<label for="selectPackage"
+								>Select the package you are intrested in</label
+							>
+							<select
+								class="select-package"
+								id="selectPackage"
+								name="select-package"
+								required>
+								<option
+									class="display"
+									value=""
+									disabled
+									selected>
+									Select package
+								</option>
 								<option value="basic">Basic</option>
 								<option value="standard">Standard</option>
 								<option value="premium">Premium</option>
@@ -192,11 +230,23 @@
 							required>
 						</textarea>
 						<br />
-						<!-- Submit Button -->
+						<!-- SUBMIT BUTTON -->
 						<input
 							type="submit"
-							value="Submit" />
+							value="Submit"
+							class="button"
+							id="myBtn" />
 					</fieldset>
+					<!-- The Modal -->
+					<div
+						id="myModal"
+						class="modal">
+						<!-- Modal content -->
+						<div class="modal-content">
+							<span class="close">&times;</span>
+							<p class="modal-message">Thank you for reaching out to us! We will contact you within 48 hours</p>
+						</div>
+					</div>
 				</form>
 				<br />
 			</section>

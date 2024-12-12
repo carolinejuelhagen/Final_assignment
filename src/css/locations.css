@@ -15,7 +15,6 @@ main {
 	font-weight: bold;
 }
 
-/* Discover section */
 .locations {
 	display: flex;
 	flex-direction: column;
@@ -23,7 +22,7 @@ main {
 	z-index: -1;
 }
 
-/* Destinations cards */
+/* LOCATION CARDS*/
 .locations__card-container {
 	display: flex;
 	flex-direction: column;

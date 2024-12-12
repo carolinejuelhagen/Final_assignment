@@ -1,3 +1,5 @@
+// Declaring locations
+
 const locations = [
 	{
 		title: "Vilma Sjøbad, Tofte",
@@ -131,6 +133,7 @@ const locations = [
 	},
 ];
 
+// Declaring Packages
 const packages = [
 	{
 		name: "Basic",
@@ -202,11 +205,11 @@ const packages = [
 	},
 ];
 
-// NAVBAR TOGGLE
+// Navbar toggle
 const toggleMenuButton = document.querySelector(".navbar__toggle-button");
 const navbarLinksContainer = document.querySelector(".navbar__links");
 
-//calling form elements
+//Calling form elements for Contact
 
 const form = document.querySelector(".contact__form");
 const firstNameInput = document.querySelector("[name='firstName']");
@@ -225,17 +228,16 @@ const tertiaryLocationInput = document.querySelector(
 const packageInput = document.querySelector("[name='select-package']");
 const messageInput = document.querySelector("[name='message']");
 
-// LOCATIONS DOM Elements
+// Locations DOM Elements
 const filterInput = document.querySelector("#filterInput");
 const filterDropdown = document.querySelector("#filterDropdown");
 const locationsCardContainer = document.querySelector(
 	".locations__card-container"
 );
 
-// CONNECTING TO LOCAL STORAGE
+// Connecting to local storage
 const customerSelections =
 	JSON.parse(localStorage.getItem("customerSelections")) || [];
-console.log(customerSelections);
 
 toggleMenuButton.addEventListener("click", () => {
 	navbarLinksContainer.classList.toggle("navbar__links--active");
@@ -367,8 +369,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	renderPackages(packages);
 });
 
-//FREQUENTLY ASKED QUESTIONS
-//Accordion
+
+// FAQ Accordion
 document.addEventListener("DOMContentLoaded", () => {
 	const accordionItems = document.querySelectorAll(".accordion-item");
 
@@ -440,3 +442,29 @@ form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	storeCustomerSelection();
 });
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  	modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  	modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  	if (event.target == modal) {
+    modal.style.display = "none";
+  	}
+}
